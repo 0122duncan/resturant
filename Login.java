@@ -10,7 +10,11 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.Color;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
 public class Login extends JFrame {
 
 	/**
@@ -19,7 +23,8 @@ public class Login extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField accountText;
-	private JTextField passwordText;
+	private JPasswordField passwordField;
+	private OrderList orderlist;
 
 	/**
 	 * Launch the application.
@@ -74,15 +79,34 @@ public class Login extends JFrame {
 		panel.add(accountText);
 		accountText.setColumns(10);
 		
-		passwordText = new JTextField();
-		passwordText.setColumns(10);
-		passwordText.setBounds(130, 170, 206, 27);
-		panel.add(passwordText);
-		
 		JButton loginSure = new JButton("確定");
+		loginSure.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String account = accountText.getText();
+				char prefix = account.charAt(0);
+				if(prefix == 109 || prefix == 77) {
+					MangerPage frame = new MangerPage();
+					frame.setVisible(true);
+				}
+				else if(prefix == 87 || prefix == 119) {}
+				else if(prefix == 76 || prefix == 108) {}
+				else if(prefix == 90 || prefix == 122) {}
+				else if(prefix == 75 || prefix == 107) {
+					ChefPG chefPG = new ChefPG(orderlist);
+					chefPG.setVisible(true);
+				}
+				else {
+					JOptionPane.showMessageDialog(null, "帳號或密碼錯誤");
+				}
+			}
+		});
 		loginSure.setBackground(new Color(255, 255, 255));
 		loginSure.setFont(new Font("新細明體", Font.PLAIN, 15));
 		loginSure.setBounds(341, 230, 85, 23);
 		panel.add(loginSure);
+		
+		passwordField = new JPasswordField();
+		passwordField.setBounds(130, 170, 206, 27);
+		panel.add(passwordField);
 	}
 }
