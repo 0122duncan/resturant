@@ -1,6 +1,5 @@
 package interfaces;
 
-import java.awt.EventQueue;
 import java.util.ArrayList;
 
 import javax.swing.JFrame;
@@ -18,7 +17,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
 
 
-public class ChefPG extends JFrame implements OrderList.Listener{
+public class ChefPG extends JFrame {
 
 
 	private JPanel contentPane;
@@ -41,41 +40,22 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 	private JLabel lblNewLabel_4;
 	private JLabel lblNewLabel_5;
 
-	ArrayList<String[][]> order = OrderList.getOrder();
-	ArrayList<Integer> tableNumber = OrderList.getTableNumber();
-	String[] header = {"food","amount"};
-	
-	
-	
-	
-	
-	
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		
-		
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					ChefPG frame = new ChefPG();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-	
-	
 
+
+	String[] header = {"food","amount"};
+	ArrayList<String[][]> orderlist;
 	
+		
 	/**
 	 * Create the frame.
+
 	 */
-	public ChefPG() {
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+	public ChefPG(OrderList newOrderlist) {
+		
+	    this.orderlist = OrderList.getOrder();
+		System.out.println(orderlist.size());
+	    
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1280, 800);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -88,44 +68,42 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		panel.setLayout(null);
 		
 		
-		//order & table number arraylist 
-		
-		order.add(new String[][] {{"hamburger","3"},{"fries","2"}});
-		order.add(new String[][] {{"fried rice","1"},{"coke","1"}});
-		order.add(new String[][] {{"tea","2"},{"fries","2"},{"beef noodles","1"},{"soup","1"}});
-		order.add(new String[][] {{"food","1"},{"drinks","2"}});
-		order.add(new String[][] {{"brownies","2"},{"drinks","1"}});
-		order.add(new String[][] {{"pizza","1"}});
-		tableNumber.add(2);
-		tableNumber.add(1);
-		tableNumber.add(5);
-		tableNumber.add(4);
-		tableNumber.add(7);
-		tableNumber.add(8);
+		//OrderList.getOrder() & table number arraylist 
+		OrderList.addOrder(new String[][] {{"asdasd","5"}},0);
+		OrderList.addOrder(new String[][] {{"fried ","1"},{"coke","1"}},1);
+		OrderList.addOrder(new String[][] {{"frd rice","1455"},{"coke","1"}},2);
+		OrderList.addOrder(new String[][] {{"fre","155"},{"coe","1"}},4);
+		OrderList.addOrder(new String[][] {{"fried rice","1"},{"coke","00"}},5);
+		OrderList.addOrder(new String[][] {{"f rice","1"},{"ke","7575"}},7);
+		OrderList.addOrder(new String[][] {{"fri","876"},{"c56565ke","1"}},8);
 		
 		
-		/*testing
-		JButton btn = new JButton("addsth");
+		
+		/*
+		
+		OrderList.add(new String[][] {{"tea","2"},{"fries","2"},{"beef noodles","1"},{"soup","1"}});
+		OrderList.add(new String[][] {{"food","1"},{"drinks","2"}});
+		OrderList.add(new String[][] {{"brownies","2"},{"drinks","1"}});
+		OrderList.add(new String[][] {{"pizza","1"}});
+		*/
+		/*
+		JButton btn = new JButton("see");
 		
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				OrderList.addOrder(new String[][] {{"hamburger","3"},{"fries","2"}},2);
+				System.out.println(OrderList.getOrder().size());
 			}
 		});
-		btn.setBounds(200, 150, 87, 23);
+		btn.setBounds(319, 190, 87, 23);
 		panel.add(btn);
-		
-		end of testing*/
-			
-		
-		
+		*/
 		
 		/*
 		 * table and default orders
 		 **/
 		
 		DefaultTableModel model = new DefaultTableModel(); 
-		orderDisplay = new JTable(model);
+		
 
 		//Append columns
 		model.addColumn("food"); 
@@ -134,21 +112,24 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		try {	
 			// Append rows
 			
-			for(int i=0;i<order.get(0).length;i++) {
-				model.addRow(new Object[]{order.get(0)[i][0],order.get(0)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(0).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(0)[i][0],OrderList.getOrder().get(0)[i][1]});			
 			}
 			
+			
+			orderDisplay = new JTable(model);
 			orderDisplay.setBounds(21, 43, 300, 270);
 			panel.add(orderDisplay);
-	
+
+			
 			//set model
 			model = new DefaultTableModel();
 			model.addColumn("food"); 
 			model.addColumn("amount"); 
 			
 			//rows
-			for(int i=0;i<order.get(1).length;i++) {
-				model.addRow(new Object[]{order.get(1)[i][0],order.get(1)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(1).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(1)[i][0],OrderList.getOrder().get(1)[i][1]});			
 			}
 			
 			//display model
@@ -162,8 +143,8 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 			model.addColumn("amount"); 
 			
 			//rows
-			for(int i=0;i<order.get(2).length;i++) {
-				model.addRow(new Object[]{order.get(2)[i][0],order.get(2)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(2).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(2)[i][0],OrderList.getOrder().get(2)[i][1]});			
 			} 
 			orderDisplay_2 = new JTable(model);
 			orderDisplay_2.setBounds(863, 43, 300, 270);
@@ -175,8 +156,8 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 			model.addColumn("amount"); 
 				
 			//rows
-			for(int i=0;i<order.get(3).length;i++) {
-				model.addRow(new Object[]{order.get(3)[i][0],order.get(3)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(3).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(3)[i][0],OrderList.getOrder().get(3)[i][1]});			
 			} 
 	
 			orderDisplay_3 = new JTable(model);
@@ -189,8 +170,8 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 			model.addColumn("amount"); 
 				
 			//rows
-			for(int i=0;i<order.get(4).length;i++) {
-				model.addRow(new Object[]{order.get(4)[i][0],order.get(4)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(4).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(4)[i][0],OrderList.getOrder().get(4)[i][1]});			
 			}
 			
 			orderDisplay_4 = new JTable(model);
@@ -202,8 +183,8 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 			model.addColumn("amount"); 
 				
 			//rows
-			for(int i=0;i<order.get(5).length;i++) {
-				model.addRow(new Object[]{order.get(5)[i][0],order.get(5)[i][1]});			
+			for(int i=0;i<OrderList.getOrder().get(5).length;i++) {
+				model.addRow(new Object[]{OrderList.getOrder().get(5)[i][0],OrderList.getOrder().get(5)[i][1]});			
 			}		
 			orderDisplay_5 = new JTable(model);
 			orderDisplay_5.setBounds(863, 380, 300, 270);
@@ -212,27 +193,27 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 			/*
 			 * table number display
 			 */
-			lblNewLabel = new JLabel(String.valueOf(tableNumber.get(0)));
+			lblNewLabel = new JLabel("2");
 			lblNewLabel.setBounds(71, 14, 46, 15);
 			panel.add(lblNewLabel);
 			
-			lblNewLabel_1 = new JLabel(String.valueOf(tableNumber.get(1)));
+			lblNewLabel_1 = new JLabel(String.valueOf(OrderList.getTableNumber().get(1)));
 			lblNewLabel_1.setBounds(484, 14, 46, 15);
 			panel.add(lblNewLabel_1);
 			
-			lblNewLabel_2 = new JLabel(String.valueOf(tableNumber.get(2)));
+			lblNewLabel_2 = new JLabel(String.valueOf(OrderList.getTableNumber().get(2)));
 			lblNewLabel_2.setBounds(914, 14, 46, 15);
 			panel.add(lblNewLabel_2);
 			
-			lblNewLabel_3 = new JLabel(String.valueOf(tableNumber.get(3)));
+			lblNewLabel_3 = new JLabel(String.valueOf(OrderList.getTableNumber().get(3)));
 			lblNewLabel_3.setBounds(71, 351, 46, 15);
 			panel.add(lblNewLabel_3);
 			
-			lblNewLabel_4 = new JLabel(String.valueOf(tableNumber.get(4)));
+			lblNewLabel_4 = new JLabel(String.valueOf(OrderList.getTableNumber().get(4)));
 			lblNewLabel_4.setBounds(493, 351, 46, 15);
 			panel.add(lblNewLabel_4);
 			
-			lblNewLabel_5 = new JLabel(String.valueOf(tableNumber.get(5)));
+			lblNewLabel_5 = new JLabel(String.valueOf(OrderList.getTableNumber().get(5)));
 			lblNewLabel_5.setBounds(914, 351, 46, 15);
 			panel.add(lblNewLabel_5);
 		}
@@ -259,7 +240,7 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		btnNewButton.setBounds(127, 10, 87, 23);
 		panel.add(btnNewButton);
 		
-		btnNewButton_1 = new JButton("done");
+			btnNewButton_1 = new JButton("done");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(1);
@@ -270,7 +251,7 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		panel.add(btnNewButton_1);
 		
 		
-		btnNewButton_2 = new JButton("done");
+		  btnNewButton_2 = new JButton("done");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(2);
@@ -280,7 +261,7 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		btnNewButton_2.setBounds(970, 10, 87, 23);
 		panel.add(btnNewButton_2);
 		
-		btnNewButton_3 = new JButton("done");
+		  btnNewButton_3 = new JButton("done");
 		btnNewButton_3.setBounds(127, 347, 87, 23);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -289,7 +270,7 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		});
 		panel.add(btnNewButton_3);
 		
-		btnNewButton_4 = new JButton("done");
+		  btnNewButton_4 = new JButton("done");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(4);
@@ -298,7 +279,7 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		btnNewButton_4.setBounds(549, 347, 87, 23);
 		panel.add(btnNewButton_4);
 		
-		btnNewButton_5 = new JButton("done");
+		  btnNewButton_5 = new JButton("done");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(5);
@@ -313,54 +294,57 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 	
 		
 	}
+
 	void btnfunction (int start) {
-		if(order.size()>=start+1) {	
-			order.remove(start);
-			tableNumber.remove(start);
+		if(OrderList.getOrder().size()>=start+1) {	
+			OrderList.getOrder().remove(start);
+			OrderList.getTableNumber().remove(start);
 			
-			updateTable();
+			updateTable(OrderList.getOrder());
 				
 		}
 	}
-	public void updateTable() {
-
+	
+	public void updateTable(ArrayList<String[][]> newOrderlist) {
+		orderlist = newOrderlist;
 		for(int j=0;j<6;j++) {
 			DefaultTableModel model = new DefaultTableModel();
 			model.addColumn("food"); 
 			model.addColumn("amount"); 
 			try {
-				for(int i=0;i<order.get(j).length;i++) {
-					model.addRow(new Object[]{order.get(j)[i][0],order.get(j)[i][1]});
+				for(int i=0;i<OrderList.getOrder().get(j).length;i++) {
+					model.addRow(new Object[]{OrderList.getOrder().get(j)[i][0],OrderList.getOrder().get(j)[i][1]});
+
 				}
 
 				switch (j) {
 					case 0:
 						orderDisplay.setModel(model);
-						lblNewLabel.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 					case 1:
 						orderDisplay_1.setModel(model);
-						lblNewLabel_1.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel_1.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 
 					case 2:
 						orderDisplay_2.setModel(model);
-						lblNewLabel_2.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel_2.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 
 					case 3:
 						orderDisplay_3.setModel(model);
-						lblNewLabel_3.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel_3.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 
 					case 4:
 						orderDisplay_4.setModel(model);
-						lblNewLabel_4.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel_4.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 
 					case 5:
 						orderDisplay_5.setModel(model);
-						lblNewLabel_5.setText(String.valueOf(tableNumber.get(j)));
+						lblNewLabel_5.setText(String.valueOf(OrderList.getTableNumber().get(j)));
 						break;
 
 				}
@@ -391,12 +375,5 @@ public class ChefPG extends JFrame implements OrderList.Listener{
 		}
 	}
 	
-	@Override
-    public void onOrderChanged() {
-        // 更新畫面
-		System.out.println(2);
-		updateTable();
-		
-		
-    }
+
 }
