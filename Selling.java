@@ -27,7 +27,7 @@ public class Selling extends JFrame {
 	private JPanel contentPane;
 	private JTable table;
 	DefaultTableModel sellCheck;
-	
+	private int date;
 
 	/**
 	 * Launch the application.
@@ -85,12 +85,15 @@ public class Selling extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				//獲取時間
 				DateTimeFormatter data = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-				row[0] = data.format(LocalDateTime.now());
-				//這邊需要去做連結訂單
-				row[1] = 2000;
-				row[2] = 1000;
-				row[3] = 2000 - 1000;
-				sellCheck.addRow(row);
+				if(date != 1) {
+					row[0] = data.format(LocalDateTime.now());
+					//這邊需要去做連結訂單
+					row[1] = 164311;
+					row[2] = 44444;
+					row[3] = (int)row[1] - (int)row[2];
+					sellCheck.addRow(row);
+					date = 1;
+				}
 			}
 		});
 		upDateButton.setBackground(new Color(255, 255, 255));
