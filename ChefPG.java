@@ -53,7 +53,6 @@ public class ChefPG extends JFrame {
 	public ChefPG(OrderList newOrderlist) {
 		
 	    this.orderlist = OrderList.getOrder();
-		System.out.println(orderlist.size());
 	    
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1280, 800);
@@ -79,25 +78,7 @@ public class ChefPG extends JFrame {
 		
 		
 		
-		/*
-		
-		OrderList.add(new String[][] {{"tea","2"},{"fries","2"},{"beef noodles","1"},{"soup","1"}});
-		OrderList.add(new String[][] {{"food","1"},{"drinks","2"}});
-		OrderList.add(new String[][] {{"brownies","2"},{"drinks","1"}});
-		OrderList.add(new String[][] {{"pizza","1"}});
-		*/
-		/*
-		JButton btn = new JButton("see");
-		
-		btn.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				System.out.println(OrderList.getOrder().size());
-			}
-		});
-		btn.setBounds(319, 190, 87, 23);
-		panel.add(btn);
-		*/
-		
+
 		/*
 		 * table and default orders
 		 **/
@@ -193,7 +174,7 @@ public class ChefPG extends JFrame {
 			/*
 			 * table number display
 			 */
-			lblNewLabel = new JLabel("2");
+			lblNewLabel = new JLabel(String.valueOf(OrderList.getTableNumber().get(0)));
 			lblNewLabel.setBounds(71, 14, 46, 15);
 			panel.add(lblNewLabel);
 			
@@ -216,22 +197,26 @@ public class ChefPG extends JFrame {
 			lblNewLabel_5 = new JLabel(String.valueOf(OrderList.getTableNumber().get(5)));
 			lblNewLabel_5.setBounds(914, 351, 46, 15);
 			panel.add(lblNewLabel_5);
+
 		}
 		catch(IndexOutOfBoundsException e) {
 		}
 		
-		
-		
+
 		/*
 		 * buttons & functions
 		 * 
 		 *
 		 */
 		
-		
+		for (int i = 0;i<OrderList.getOrder().size();i++) {
+			OrderList.removeOrder(i);
+			
+		}
+
+		updateTable(OrderList.getOrder());
 
 		btnNewButton = new JButton("done");
-		
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(0);
@@ -240,7 +225,7 @@ public class ChefPG extends JFrame {
 		btnNewButton.setBounds(127, 10, 87, 23);
 		panel.add(btnNewButton);
 		
-			btnNewButton_1 = new JButton("done");
+		btnNewButton_1 = new JButton("done");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(1);
@@ -251,7 +236,7 @@ public class ChefPG extends JFrame {
 		panel.add(btnNewButton_1);
 		
 		
-		  btnNewButton_2 = new JButton("done");
+		btnNewButton_2 = new JButton("done");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(2);
@@ -261,7 +246,7 @@ public class ChefPG extends JFrame {
 		btnNewButton_2.setBounds(970, 10, 87, 23);
 		panel.add(btnNewButton_2);
 		
-		  btnNewButton_3 = new JButton("done");
+		btnNewButton_3 = new JButton("done");
 		btnNewButton_3.setBounds(127, 347, 87, 23);
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -270,7 +255,7 @@ public class ChefPG extends JFrame {
 		});
 		panel.add(btnNewButton_3);
 		
-		  btnNewButton_4 = new JButton("done");
+		btnNewButton_4 = new JButton("done");
 		btnNewButton_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(4);
@@ -279,7 +264,7 @@ public class ChefPG extends JFrame {
 		btnNewButton_4.setBounds(549, 347, 87, 23);
 		panel.add(btnNewButton_4);
 		
-		  btnNewButton_5 = new JButton("done");
+		btnNewButton_5 = new JButton("done");
 		btnNewButton_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				btnfunction(5);
@@ -288,10 +273,7 @@ public class ChefPG extends JFrame {
 		btnNewButton_5.setBounds(970, 347, 87, 23);
 		panel.add(btnNewButton_5);
 		
-		
-		
 
-	
 		
 	}
 
@@ -356,18 +338,23 @@ public class ChefPG extends JFrame {
 						orderDisplay.setModel(model);
 						lblNewLabel.setText("");
 					case 1:
+						model.setRowCount(0);
 						orderDisplay_1.setModel(model);
 						lblNewLabel_1.setText("");
 					case 2:
+						model.setRowCount(0);
 						orderDisplay_2.setModel(model);
 						lblNewLabel_2.setText("");
 					case 3:
+						model.setRowCount(0);
 						orderDisplay_3.setModel(model);
 						lblNewLabel_3.setText("");
 					case 4:
+						model.setRowCount(0);
 						orderDisplay_4.setModel(model);
 						lblNewLabel_4.setText("");
 					case 5:
+						model.setRowCount(0);
 						orderDisplay_5.setModel(model);
 						lblNewLabel_5.setText("");
 				}
