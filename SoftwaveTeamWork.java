@@ -1,24 +1,23 @@
 package firstWindowBulider;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
 import java.awt.Color;
-import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-
+import java.awt.EventQueue;
 import java.awt.Font;
-import javax.swing.JTextField;
-import javax.swing.JTable;
-import javax.swing.JScrollPane;
-import javax.swing.JButton;
-import javax.swing.table.*;
-import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.border.EmptyBorder;
+import javax.swing.table.DefaultTableModel;
 
 public class SoftwaveTeamWork extends JFrame {
 
@@ -128,6 +127,32 @@ public class SoftwaveTeamWork extends JFrame {
 		model.setColumnIdentifiers(column);//設置列表上方的東西
 		table.setModel(model);//將列表放入table中
 		scrollPane.setViewportView(table);
+		
+		row[0] = "昂辜桂";
+		row[1] = "29";
+		row[2] = "廚師";
+		row[3] = "10:00~5:00";
+		model.addRow(row);
+		row[0] = "游知千";
+		row[1] = "20";
+		row[2] = "服務生";
+		row[3] = "9:00~5:00";
+		model.addRow(row);
+		row[0] = "弘一級蚌";
+		row[1] = "21";
+		row[2] = "雜工";
+		row[3] = "9:00~5:00";
+		model.addRow(row);
+		row[0] = "壬宮志慧	.烈雀";
+		row[1] = "55";
+		row[2] = "經理";
+		row[3] = "11:00~6:00";
+		model.addRow(row);
+		row[0] = "樹";
+		row[1] = "20";
+		row[2] = "領桌人員";
+		row[3] = "10:00~5:00";
+		model.addRow(row);
 		
 		JButton newData = new JButton("新增");
 		newData.addActionListener(new ActionListener() {

@@ -41,7 +41,7 @@ public class MangerPage extends JFrame {
 	 */
 	public MangerPage() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 490, 351);
+		setBounds(100, 100, 520, 382);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -49,7 +49,7 @@ public class MangerPage extends JFrame {
 		contentPane.setLayout(null);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(0, 0, 486, 314);
+		panel.setBounds(0, 0, 500, 345);
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
@@ -61,7 +61,7 @@ public class MangerPage extends JFrame {
 				
 			}
 		});
-		employeeButton.setBounds(153, 35, 170, 36);
+		employeeButton.setBounds(173, 35, 170, 36);
 		employeeButton.setBackground(new Color(255, 255, 255));
 		employeeButton.setFont(new Font("新細明體", Font.PLAIN, 15));
 		panel.add(employeeButton);
@@ -73,7 +73,7 @@ public class MangerPage extends JFrame {
 				buttonframe.setVisible(true);
 			}
 		});
-		checkButton.setBounds(153, 90, 170, 36);
+		checkButton.setBounds(173, 90, 170, 36);
 		checkButton.setBackground(new Color(255, 255, 255));
 		checkButton.setFont(new Font("新細明體", Font.PLAIN, 15));
 		panel.add(checkButton);
@@ -85,7 +85,7 @@ public class MangerPage extends JFrame {
 				buttonframe.setVisible(true);
 			}
 		});
-		sellButton.setBounds(153, 145, 170, 36);
+		sellButton.setBounds(173, 145, 170, 36);
 		sellButton.setBackground(new Color(255, 255, 255));
 		sellButton.setFont(new Font("新細明體", Font.PLAIN, 15));
 		panel.add(sellButton);
@@ -98,7 +98,18 @@ public class MangerPage extends JFrame {
 		});
 		tableButton.setFont(new Font("新細明體", Font.PLAIN, 15));
 		tableButton.setBackground(Color.WHITE);
-		tableButton.setBounds(153, 200, 170, 36);
+		tableButton.setBounds(173, 255, 170, 36);
 		panel.add(tableButton);
+		
+		JButton orderButton = new JButton("銷售分析");
+		orderButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
+		orderButton.setFont(new Font("新細明體", Font.PLAIN, 15));
+		orderButton.setBackground(Color.WHITE);
+		orderButton.setBounds(173, 200, 170, 36);
+		panel.add(orderButton);
 	}
 }
