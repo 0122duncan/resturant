@@ -1,15 +1,12 @@
-package restaurant;
+package interfaces;
 
-import java.awt.Color;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
-import javax.swing.JList;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
-import javax.swing.AbstractListModel;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionListener;
@@ -94,6 +91,20 @@ public class waiterOfOrder extends JFrame {
 		submit.setFont(new Font("新細明體", Font.BOLD, 17));
 		submit.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				//把訂單放進OrderList
+				
+				
+				int rows = table.getRowCount();
+				String order[][] = new String[rows][2];
+				for(int i=0;i<rows;i++) {
+					order[i][0] = (String) table.getValueAt(i,0);
+					order[i][1] = (String)table.getValueAt(i,1);
+
+				}
+				OrderList.addOrder(order, 把這裡改成桌號);
+					
+				//timer還沒寫
+				
 			}
 
 		});
