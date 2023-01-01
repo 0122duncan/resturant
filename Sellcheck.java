@@ -58,6 +58,7 @@ public class Sellcheck extends JFrame {
 	 * Create the frame.
 	 */
 	public Sellcheck() {
+		//預先輸入餐點好讓一開始就會顯示出來("key",value)
 		map.put("餐點1",10);
 		map.put("餐點2",10);
 		map.put("餐點3",10);
@@ -83,6 +84,7 @@ public class Sellcheck extends JFrame {
 		table = new JTable();
 		table.addMouseListener(new MouseAdapter() {
 			@Override
+			//mouseClicked為滑鼠點擊後會觸發
 			public void mouseClicked(MouseEvent e) {
 				int i = table.getSelectedRow();
 				//點選該格可以取得該格的資料並顯示在輸入格中，接著若選取刪除就可以直接將那格刪掉
@@ -97,10 +99,11 @@ public class Sellcheck extends JFrame {
 		System.out.println(map);
 		dishCheck.setColumnIdentifiers(column);//設置列表上方的東西
 		table.setModel(dishCheck);//將列表放入table中
+		//用變數i去尋訪每一個在map中的key
 		for(String i : map.keySet() ) {
 			leftover[0] = i;
-			leftover[1] = map.get(i);
-			dishCheck.addRow(leftover);
+			leftover[1] = map.get(i);//取得對應的值
+			dishCheck.addRow(leftover);//添加進table中
 		}
 		scrollPane.setViewportView(table);
 		

@@ -127,7 +127,7 @@ public class SoftwaveTeamWork extends JFrame {
 		model.setColumnIdentifiers(column);//設置列表上方的東西
 		table.setModel(model);//將列表放入table中
 		scrollPane.setViewportView(table);
-		
+		//輸入預設資料
 		row[0] = "昂辜桂";
 		row[1] = "29";
 		row[2] = "廚師";
