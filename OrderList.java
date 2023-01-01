@@ -1,4 +1,4 @@
-package interfaces;
+
 
 import java.util.ArrayList;
 
@@ -11,7 +11,7 @@ public class OrderList  {
     private static ArrayList<Integer> tableNumberlist = new ArrayList<>();
     private static ArrayList<Long> startTime = new ArrayList<>();
     private static ArrayList<Long> dineTime = new ArrayList<>();
-
+    private static int tableState[] = new int[12] ;
  
     public static void addOrder(String[][] order,int tableNumber,long start) {
         orderlist.add(order); 
@@ -25,8 +25,12 @@ public class OrderList  {
         tableNumberlist.remove(tableNumberlist.get(orderNumber));
         long start = startTime.remove(0);
         dineTime.add(System.currentTimeMillis()-start);
-        
-        
+    }
+    
+    public static void updateTableStatus(int tableNumber ,int status) {
+    	tableState[tableNumber] = status;
+
+    	
     }
     
 
@@ -39,8 +43,12 @@ public class OrderList  {
     public static ArrayList<Long> getDiningTime() {
         return dineTime;
     }    
+    public static int[] getTableStatus() {
+    	return tableState;
+    }
     
-
+    //使用方法: 
+    //int 狀態 = OrderList.getTableStatus()[你要的桌號]
 
 
 
