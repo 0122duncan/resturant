@@ -1,4 +1,4 @@
-package restaurant;
+package firstWindowBulider;
 
 import java.awt.Color;
 import java.awt.Container;
@@ -20,6 +20,10 @@ import java.awt.Toolkit;
 
 public class tableHappening_busboy extends tableHappening_manager {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel bady;
 
 
@@ -45,8 +49,8 @@ public class tableHappening_busboy extends tableHappening_manager {
 	 */
 	public tableHappening_busboy() throws MalformedURLException {
 		setTitle("雜工");
-		setIconImage(Toolkit.getDefaultToolkit().getImage(tableHappening_busboy.class.getResource("/restaurant/images/table.png")));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setIconImage(Toolkit.getDefaultToolkit().getImage(tableHappening_busboy.class.getResource("/restaurant/images/table.png")));
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 710, 496);
 		bady = new JPanel();
 		bady.setBorder(new EmptyBorder(5, 5, 5, 5));

@@ -1,4 +1,4 @@
-package restaurant;
+package firstWindowBulider;
 
 import java.awt.Container;
 import java.awt.EventQueue;
@@ -20,6 +20,10 @@ import java.awt.Toolkit;
 
 public class tableHappening_manager extends JFrame {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JPanel bady;
 
 	/**
@@ -43,11 +47,11 @@ public class tableHappening_manager extends JFrame {
 	 * 
 	 * @throws MalformedURLException
 	 */
-	public tableHappening_manager() throws MalformedURLException {
+	public tableHappening_manager(){
 		setTitle("餐桌數量設置");
-		setIconImage(Toolkit.getDefaultToolkit()
-				.getImage(tableHappening_manager.class.getResource("/restaurant/images/table.png")));
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//		setIconImage(Toolkit.getDefaultToolkit()
+//				.getImage(tableHappening_manager.class.getResource("/restaurant/images/table.png")));
+		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 710, 496);
 		bady = new JPanel();
 		bady.setBorder(new EmptyBorder(5, 5, 5, 5));
