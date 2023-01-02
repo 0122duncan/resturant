@@ -745,6 +745,340 @@ public class tableHappening_busboy extends tableHappening_manager {
 			}
 
 		});
+		
+		//餐桌數量隱藏
+		if (OrderList.getTableQuantit()==1) {
+			table1.setVisible(true);
+			table2.setVisible(false);
+			table3.setVisible(false);
+			table4.setVisible(false);
+			table5.setVisible(false);
+			table6.setVisible(false);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(false);
+			state3.setVisible(false);
+			state4.setVisible(false);
+			state5.setVisible(false);
+			state6.setVisible(false);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==2) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(false);
+			table4.setVisible(false);
+			table5.setVisible(false);
+			table6.setVisible(false);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(false);
+			state4.setVisible(false);
+			state5.setVisible(false);
+			state6.setVisible(false);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==3) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(false);
+			table5.setVisible(false);
+			table6.setVisible(false);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(false);
+			state5.setVisible(false);
+			state6.setVisible(false);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==4) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(false);
+			table6.setVisible(false);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(false);
+			state6.setVisible(false);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==5) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(false);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(false);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+		}
+		
+		if (OrderList.getTableQuantit()==6) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(false);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(false);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+		}
+		
+		if (OrderList.getTableQuantit()==7) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(false);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(false);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+			
+		}
+		
+		if (OrderList.getTableQuantit()==8) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(true);
+			table9.setVisible(false);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(true);
+			state9.setVisible(false);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+		}
+		
+		if (OrderList.getTableQuantit()==9) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(true);
+			table9.setVisible(true);
+			table10.setVisible(false);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(true);
+			state9.setVisible(true);
+			state10.setVisible(false);
+			state11.setVisible(false);
+			state12.setVisible(false);
+		}
+		
+		if (OrderList.getTableQuantit()==10) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(true);
+			table9.setVisible(true);
+			table10.setVisible(true);
+			table11.setVisible(false);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(true);
+			state9.setVisible(true);
+			state10.setVisible(true);
+			state11.setVisible(false);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==11) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(true);
+			table9.setVisible(true);
+			table10.setVisible(true);
+			table11.setVisible(true);
+			table12.setVisible(false);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(true);
+			state9.setVisible(true);
+			state10.setVisible(true);
+			state11.setVisible(true);
+			state12.setVisible(false);
+			
+		}
+		
+		if (OrderList.getTableQuantit()==12) {
+			table1.setVisible(true);
+			table2.setVisible(true);
+			table3.setVisible(true);
+			table4.setVisible(true);
+			table5.setVisible(true);
+			table6.setVisible(true);
+			table7.setVisible(true);
+			table8.setVisible(true);
+			table9.setVisible(true);
+			table10.setVisible(true);
+			table11.setVisible(true);
+			table12.setVisible(true);
+			state1.setVisible(true);
+			state2.setVisible(true);
+			state3.setVisible(true);
+			state4.setVisible(true);
+			state5.setVisible(true);
+			state6.setVisible(true);
+			state7.setVisible(true);
+			state8.setVisible(true);
+			state9.setVisible(true);
+			state10.setVisible(true);
+			state11.setVisible(true);
+			state12.setVisible(true);
+		}
+	
 
 		// 提交
 		JButton Confirm = new JButton("提交");
