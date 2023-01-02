@@ -352,6 +352,207 @@ public class tableHappening_waiter extends JFrame {
 		}
 
 		 
+		//餐桌數量隱藏
+				if (OrderList.getTableQuantit()==1) {
+					table1.setVisible(true);
+					table2.setVisible(false);
+					table3.setVisible(false);
+					table4.setVisible(false);
+					table5.setVisible(false);
+					table6.setVisible(false);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+		
+					
+				}
+				
+				if (OrderList.getTableQuantit()==2) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(false);
+					table4.setVisible(false);
+					table5.setVisible(false);
+					table6.setVisible(false);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+			
+					
+				}
+				
+				if (OrderList.getTableQuantit()==3) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(false);
+					table5.setVisible(false);
+					table6.setVisible(false);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+				
+					
+				}
+				
+				if (OrderList.getTableQuantit()==4) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(false);
+					table6.setVisible(false);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+			
+					
+				}
+				
+				if (OrderList.getTableQuantit()==5) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(false);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+			
+				}
+				
+				if (OrderList.getTableQuantit()==6) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(false);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+		
+				}
+				
+				if (OrderList.getTableQuantit()==7) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(false);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+		
+					
+					
+				}
+				
+				if (OrderList.getTableQuantit()==8) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(true);
+					table9.setVisible(false);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+			
+				}
+				
+				if (OrderList.getTableQuantit()==9) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(true);
+					table9.setVisible(true);
+					table10.setVisible(false);
+					table11.setVisible(false);
+					table12.setVisible(false);
+		
+				}
+				
+				if (OrderList.getTableQuantit()==10) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(true);
+					table9.setVisible(true);
+					table10.setVisible(true);
+					table11.setVisible(false);
+					table12.setVisible(false);
+				
+					
+				}
+				
+				if (OrderList.getTableQuantit()==11) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(true);
+					table9.setVisible(true);
+					table10.setVisible(true);
+					table11.setVisible(true);
+					table12.setVisible(false);
+
+					
+				}
+				
+				if (OrderList.getTableQuantit()==12) {
+					table1.setVisible(true);
+					table2.setVisible(true);
+					table3.setVisible(true);
+					table4.setVisible(true);
+					table5.setVisible(true);
+					table6.setVisible(true);
+					table7.setVisible(true);
+					table8.setVisible(true);
+					table9.setVisible(true);
+					table10.setVisible(true);
+					table11.setVisible(true);
+					table12.setVisible(true);
+		
+				}
+			
 
 		// 提交
 
