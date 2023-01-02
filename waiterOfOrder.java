@@ -93,7 +93,6 @@ public class waiterOfOrder extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				//把訂單放進OrderList
 				
-				
 				int rows = table.getRowCount();
 				String order[][] = new String[rows][2];
 				for(int i=0;i<rows;i++) {
@@ -101,7 +100,7 @@ public class waiterOfOrder extends JFrame {
 					order[i][1] = (String)table.getValueAt(i,1);
 
 				}
-				OrderList.addOrder(order, 把這裡改成桌號);
+				OrderList.addOrder(order,OrderList.getNumber());
 					
 				//timer還沒寫
 				
