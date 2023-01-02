@@ -18,7 +18,7 @@ public class MangerPage extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JFrame frame;
+	JFrame frame;
 
 	/**
 	 * Launch the application.
