@@ -1,4 +1,5 @@
-package firstWindowBulider;
+package restaurant;
+//package firstWindowBulider;
 
 import java.awt.Container;
 import java.awt.EventQueue;
@@ -20,10 +21,8 @@ import java.awt.Toolkit;
 
 public class tableHappening_manager extends JFrame {
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+	private static int Quantity=12;
+	
 	private JPanel bady;
 
 	/**
@@ -47,11 +46,9 @@ public class tableHappening_manager extends JFrame {
 	 * 
 	 * @throws MalformedURLException
 	 */
-	public tableHappening_manager(){
+	public tableHappening_manager() throws MalformedURLException {
 		setTitle("餐桌數量設置");
-//		setIconImage(Toolkit.getDefaultToolkit()
-//				.getImage(tableHappening_manager.class.getResource("/restaurant/images/table.png")));
-		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 710, 496);
 		bady = new JPanel();
 		bady.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -158,6 +155,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=1;
 				}
 				
 				if ("02".equals(nowQuantity)) {
@@ -173,6 +171,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=2;
 				}
 				
 				if ("03".equals(nowQuantity)) {
@@ -188,6 +187,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=3;
 				}
 				
 				if ("04".equals(nowQuantity)) {
@@ -203,6 +203,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=4;
 				}
 				
 				if ("05".equals(nowQuantity)) {
@@ -218,6 +219,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=5;
 				}
 				
 				if ("06".equals(nowQuantity)) {
@@ -233,6 +235,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=6;
 				}
 				
 				if ("07".equals(nowQuantity)) {
@@ -248,6 +251,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=7;
 				}
 				
 				if ("08".equals(nowQuantity)) {
@@ -263,6 +267,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=8;
 				}
 				
 				if ("09".equals(nowQuantity)) {
@@ -278,6 +283,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(false);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=9;
 				}
 				
 				if ("10".equals(nowQuantity)) {
@@ -293,6 +299,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(true);
 					table11.setVisible(false);
 					table12.setVisible(false);
+					Quantity=10;
 				}
 				
 				if ("11".equals(nowQuantity)) {
@@ -308,6 +315,7 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(true);
 					table11.setVisible(true);
 					table12.setVisible(false);
+					Quantity=11;
 				}
 				
 				if ("12".equals(nowQuantity)) {
@@ -323,17 +331,19 @@ public class tableHappening_manager extends JFrame {
 					table10.setVisible(true);
 					table11.setVisible(true);
 					table12.setVisible(true);
-
+					Quantity=12;
 				}
 			}
 
 		});
 		
+		
 		// 提交
 				JButton Confirm = new JButton("提交");
 				Confirm.addActionListener(new ActionListener() {
 					public void actionPerformed(ActionEvent e) {
-						
+						String nowQuantity = (String) quantity.getSelectedItem();
+						OrderList.updateTableQuantity(Quantity);
 					}
 				});
 				Confirm.setBounds(562, 350, 85, 23);
