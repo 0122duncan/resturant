@@ -11,10 +11,13 @@ import javax.swing.table.DefaultTableModel;
 
 import javax.swing.JTable;
 import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import java.awt.Window.Type;
 
 
 public class ChefPG extends JFrame {
@@ -45,14 +48,31 @@ public class ChefPG extends JFrame {
 	String[] header = {"food","amount"};
 	ArrayList<String[][]> orderlist;
 	
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					OrderList orderlist= null; 
+					ChefPG frame = new ChefPG(orderlist);
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
 		
 	/**
 	 * Create the frame.
 
 	 */
 	public ChefPG(OrderList newOrderlist) {
+		setTitle("Kitchen \r\n");
 		
 	    this.orderlist = OrderList.getOrder();
+
+	    
 	    
 		setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 		setBounds(100, 100, 1280, 800);
@@ -68,29 +88,28 @@ public class ChefPG extends JFrame {
 		
 		
 		//OrderList.getOrder() & table number arraylist 
-		OrderList.addOrder(new String[][] {{"asdasd","5"}},0);
-		OrderList.addOrder(new String[][] {{"fried ","1"},{"coke","1"}},1);
-		OrderList.addOrder(new String[][] {{"frd rice","1455"},{"coke","1"}},2);
-		OrderList.addOrder(new String[][] {{"fre","155"},{"coe","1"}},4);
-		OrderList.addOrder(new String[][] {{"fried rice","1"},{"coke","00"}},5);
-		OrderList.addOrder(new String[][] {{"f rice","1"},{"ke","7575"}},7);
-		OrderList.addOrder(new String[][] {{"fri","876"},{"c56565ke","1"}},8);
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
+		OrderList.addOrder(new String[][] {{"",""}},0,System.currentTimeMillis());
 		
 		
 		
 
-		/*
-		 * table and default orders
-		 **/
-		
-		DefaultTableModel model = new DefaultTableModel(); 
-		
-
-		//Append columns
-		model.addColumn("food"); 
-		model.addColumn("amount"); 
 		
 		try {	
+			/*
+			 * table and default orders
+			 **/
+			DefaultTableModel model = new DefaultTableModel(); 
+			
+			
+			//Append columns
+			model.addColumn("food"); 
+			model.addColumn("amount"); 
+			
 			// Append rows
 			
 			for(int i=0;i<OrderList.getOrder().get(0).length;i++) {
@@ -167,6 +186,7 @@ public class ChefPG extends JFrame {
 			for(int i=0;i<OrderList.getOrder().get(5).length;i++) {
 				model.addRow(new Object[]{OrderList.getOrder().get(5)[i][0],OrderList.getOrder().get(5)[i][1]});			
 			}		
+			
 			orderDisplay_5 = new JTable(model);
 			orderDisplay_5.setBounds(863, 380, 300, 270);
 			panel.add(orderDisplay_5);
@@ -208,11 +228,12 @@ public class ChefPG extends JFrame {
 		 * 
 		 *
 		 */
-		
-		for (int i = 0;i<OrderList.getOrder().size();i++) {
-			OrderList.removeOrder(i);
+
+		for (int i = 0;i<6;i++) {
+			OrderList.removeOrder(0);
 			
 		}
+
 
 		updateTable(OrderList.getOrder());
 
