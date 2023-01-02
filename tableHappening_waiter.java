@@ -56,11 +56,25 @@ public class tableHappening_waiter extends JFrame {
 				waiterOfOrderFrame.setVisible(true);
 			}
 		});
-		
 		table1.setBounds(40, 50, 85, 23);
 		contentPane.add(table1);
-
-		JButton table2 = new JButton("空閒中");
+		if (OrderList.getTableStatus()[1] == 1) {
+			table1.setText("空閒中");
+			table1.setBackground(Color.GREEN);
+			table1.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[1] == 2) {
+			table1.setText("使用中");
+			table1.setBackground(Color.RED);
+			table1.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[1] == 3) {
+			table1.setText("未清理");
+			table1.setBackground(Color.ORANGE);
+			table1.setForeground(Color.BLACK);
+		}
+		
+		JButton table2 = new JButton("使用中");
 		table2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -69,9 +83,24 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table2.setBounds(160, 50, 85, 23);
 		contentPane.add(table2);
+		if (OrderList.getTableStatus()[2] == 1) {
+			table2.setText("空閒中");
+			table2.setBackground(Color.GREEN);
+			table2.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[2] == 2) {
+			table2.setText("使用中");
+			table2.setBackground(Color.RED);
+			table2.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[2] == 3) {
+			table2.setText("未清理");
+			table2.setBackground(Color.ORANGE);
+			table2.setForeground(Color.BLACK);
+		}
 		
 
-		JButton table3 = new JButton("空閒中");
+		JButton table3 = new JButton("使用中");
 		table3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -80,8 +109,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table3.setBounds(280, 50, 85, 23);
 		contentPane.add(table3);
+		if (OrderList.getTableStatus()[3] == 1) {
+			table3.setText("空閒中");
+			table3.setBackground(Color.GREEN);
+			table3.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[3] == 2) {
+			table3.setText("使用中");
+			table3.setBackground(Color.RED);
+			table3.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[3] == 3) {
+			table3.setText("未清理");
+			table3.setBackground(Color.ORANGE);
+			table3.setForeground(Color.BLACK);
+		}
 
-		JButton table4 = new JButton("空閒中");
+		JButton table4 = new JButton("使用中");
 		table4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -90,8 +134,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table4.setBounds(400, 50, 85, 23);
 		contentPane.add(table4);
+		if (OrderList.getTableStatus()[4] == 1) {
+			table4.setText("空閒中");
+			table4.setBackground(Color.GREEN);
+			table4.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[4] == 2) {
+			table4.setText("使用中");
+			table4.setBackground(Color.RED);
+			table4.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[4] == 3) {
+			table4.setText("未清理");
+			table4.setBackground(Color.ORANGE);
+			table4.setForeground(Color.BLACK);
+		}
 
-		JButton table5 = new JButton("空閒中");
+		JButton table5 = new JButton("使用中");
 		table5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -100,8 +159,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table5.setBounds(40, 200, 85, 23);
 		contentPane.add(table5);
+		if (OrderList.getTableStatus()[5] == 1) {
+			table5.setText("空閒中");
+			table5.setBackground(Color.GREEN);
+			table5.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[5] == 2) {
+			table5.setText("使用中");
+			table5.setBackground(Color.RED);
+			table5.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[5] == 3) {
+			table5.setText("未清理");
+			table5.setBackground(Color.ORANGE);
+			table5.setForeground(Color.BLACK);
+		}
 
-		JButton table6 = new JButton("空閒中");
+		JButton table6 = new JButton("使用中");
 		table6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -110,8 +184,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table6.setBounds(160, 200, 85, 23);
 		contentPane.add(table6);
+		if (OrderList.getTableStatus()[6] == 1) {
+			table6.setText("空閒中");
+			table6.setBackground(Color.GREEN);
+			table6.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[6] == 2) {
+			table6.setText("使用中");
+			table6.setBackground(Color.RED);
+			table6.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[6] == 3) {
+			table6.setText("未清理");
+			table6.setBackground(Color.ORANGE);
+			table6.setForeground(Color.BLACK);
+		}
 
-		JButton table7 = new JButton("空閒中");
+		JButton table7 = new JButton("使用中");
 		table7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -120,8 +209,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table7.setBounds(280, 200, 85, 23);
 		contentPane.add(table7);
+		if (OrderList.getTableStatus()[7] == 1) {
+			table7.setText("空閒中");
+			table7.setBackground(Color.GREEN);
+			table7.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[7] == 2) {
+			table7.setText("使用中");
+			table7.setBackground(Color.RED);
+			table7.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[7] == 3) {
+			table7.setText("未清理");
+			table7.setBackground(Color.ORANGE);
+			table7.setForeground(Color.BLACK);
+		}
 
-		JButton table8 = new JButton("空閒中");
+		JButton table8 = new JButton("使用中");
 		table8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -130,8 +234,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table8.setBounds(400, 200, 85, 23);
 		contentPane.add(table8);
+		if (OrderList.getTableStatus()[8] == 1) {
+			table8.setText("空閒中");
+			table8.setBackground(Color.GREEN);
+			table8.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[8] == 2) {
+			table8.setText("使用中");
+			table8.setBackground(Color.RED);
+			table8.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[8] == 3) {
+			table8.setText("未清理");
+			table8.setBackground(Color.ORANGE);
+			table8.setForeground(Color.BLACK);
+		}
 
-		JButton table9 = new JButton("空閒中");
+		JButton table9 = new JButton("使用中");
 		table9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -140,8 +259,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table9.setBounds(40, 350, 85, 23);
 		contentPane.add(table9);
+		if (OrderList.getTableStatus()[9] == 1) {
+			table9.setText("空閒中");
+			table9.setBackground(Color.GREEN);
+			table9.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[9] == 2) {
+			table9.setText("使用中");
+			table9.setBackground(Color.RED);
+			table9.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[9] == 3) {
+			table9.setText("未清理");
+			table9.setBackground(Color.ORANGE);
+			table9.setForeground(Color.BLACK);
+		}
 
-		JButton table10 = new JButton("空閒中");
+		JButton table10 = new JButton("使用中");
 		table10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -150,8 +284,23 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table10.setBounds(160, 350, 85, 23);
 		contentPane.add(table10);
+		if (OrderList.getTableStatus()[10] == 1) {
+			table10.setText("空閒中");
+			table10.setBackground(Color.GREEN);
+			table10.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[10] == 2) {
+			table10.setText("使用中");
+			table10.setBackground(Color.RED);
+			table10.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[10] == 3) {
+			table10.setText("未清理");
+			table10.setBackground(Color.ORANGE);
+			table10.setForeground(Color.BLACK);
+		}
 
-		JButton table11 = new JButton("空閒中");
+		JButton table11 = new JButton("使用中");
 		table11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -160,8 +309,24 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table11.setBounds(280, 350, 85, 23);
 		contentPane.add(table11);
+		if (OrderList.getTableStatus()[11] == 1) {
+			table11.setText("空閒中");
+			table11.setBackground(Color.GREEN);
+			table11.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[11] == 2) {
+			table11.setText("使用中");
+			table11.setBackground(Color.RED);
+			table11.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[11] == 3) {
+			table11.setText("未清理");
+			table11.setBackground(Color.ORANGE);
+			table11.setForeground(Color.BLACK);
+		}
 
-		JButton table12 = new JButton("空閒中");
+
+		JButton table12 = new JButton("使用中");
 		table12.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
@@ -170,6 +335,21 @@ public class tableHappening_waiter extends JFrame {
 		});
 		table12.setBounds(400, 350, 85, 23);
 		contentPane.add(table12);
+		if (OrderList.getTableStatus()[12] == 1) {
+			table12.setText("空閒中");
+			table12.setBackground(Color.GREEN);
+			table12.setForeground(Color.BLACK);
+		}
+		if (OrderList.getTableStatus()[12] == 2) {
+			table12.setText("使用中");
+			table12.setBackground(Color.RED);
+			table12.setForeground(Color.WHITE);
+		}
+		if (OrderList.getTableStatus()[12] == 3) {
+			table12.setText("未清理");
+			table12.setBackground(Color.ORANGE);
+			table12.setForeground(Color.BLACK);
+		}
 
 		 
 
@@ -178,7 +358,7 @@ public class tableHappening_waiter extends JFrame {
 		JButton Confirm = new JButton("提交");
 		Confirm.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
+				
 			}
 		});
 		Confirm.setBounds(562, 350, 85, 23);
