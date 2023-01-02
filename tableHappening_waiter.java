@@ -54,6 +54,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(1);
 			}
 		});
 		table1.setBounds(40, 50, 85, 23);
@@ -79,6 +80,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(2);
 			}
 		});
 		table2.setBounds(160, 50, 85, 23);
@@ -105,6 +107,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(3);
 			}
 		});
 		table3.setBounds(280, 50, 85, 23);
@@ -130,6 +133,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(4);
 			}
 		});
 		table4.setBounds(400, 50, 85, 23);
@@ -155,6 +159,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(5);
 			}
 		});
 		table5.setBounds(40, 200, 85, 23);
@@ -180,6 +185,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(6);
 			}
 		});
 		table6.setBounds(160, 200, 85, 23);
@@ -205,6 +211,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(7);
 			}
 		});
 		table7.setBounds(280, 200, 85, 23);
@@ -230,6 +237,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(8);
 			}
 		});
 		table8.setBounds(400, 200, 85, 23);
@@ -255,6 +263,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(9);
 			}
 		});
 		table9.setBounds(40, 350, 85, 23);
@@ -280,6 +289,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(10);
 			}
 		});
 		table10.setBounds(160, 350, 85, 23);
@@ -305,6 +315,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(11);
 			}
 		});
 		table11.setBounds(280, 350, 85, 23);
@@ -331,6 +342,7 @@ public class tableHappening_waiter extends JFrame {
 			public void actionPerformed(ActionEvent e) {
 				waiterOfOrder waiterOfOrderFrame = new waiterOfOrder();
 				waiterOfOrderFrame.setVisible(true);
+				OrderList.tableNumber(12);
 			}
 		});
 		table12.setBounds(400, 350, 85, 23);
