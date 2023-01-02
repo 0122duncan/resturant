@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 
 //訂單資料儲存區
@@ -11,11 +9,11 @@ public class OrderList {
 	private static ArrayList<Long> dineTime = new ArrayList<>();
 	private static int tableState[] = new int[13];
 	private static int tableQuantit =12 ;
+	private static int tableNumber ;
 
-	public static void addOrder(String[][] order, int tableNumber, long start) {
+	public static void addOrder(String[][] order, int tableNumber) {
 		orderlist.add(order);
 		tableNumberlist.add(tableNumber);
-		startTime.add(start);
 	}
 
 	public static void removeOrder(int orderNumber) {
@@ -35,7 +33,6 @@ public class OrderList {
 		tableQuantit = nowQuantity;
 	}
 	
-
 	public static ArrayList<String[][]> getOrder() {
 		return orderlist;
 	}
@@ -56,7 +53,15 @@ public class OrderList {
 		return tableQuantit;
 	}
 	
+	//桌號傳入
+	public static void tableNumber(int Number) {
+		tableNumber = Number;
+	}
 	
+	//桌號傳出
+	public static int getNumber() {
+		return tableNumber;
+	}
 	
 
 	// 使用方法:
